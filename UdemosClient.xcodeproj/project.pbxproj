@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED258F3229CE1D0700305AFE /* ReceivedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED258F3129CE1D0700305AFE /* ReceivedDataView.swift */; };
+		ED258F3429CE1D3100305AFE /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED258F3329CE1D3100305AFE /* MessageInputView.swift */; };
+		ED2BD35629CA400D000EB645 /* UdemosClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD35529CA400D000EB645 /* UdemosClientApp.swift */; };
+		ED2BD35829CA400D000EB645 /* MessangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD35729CA400D000EB645 /* MessangerView.swift */; };
+		ED2BD35A29CA400F000EB645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2BD35929CA400F000EB645 /* Assets.xcassets */; };
+		ED2BD35D29CA400F000EB645 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2BD35C29CA400F000EB645 /* Preview Assets.xcassets */; };
+		ED2BD35F29CA400F000EB645 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD35E29CA400F000EB645 /* Persistence.swift */; };
+		ED2BD36229CA400F000EB645 /* UdemosClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD36029CA400F000EB645 /* UdemosClient.xcdatamodeld */; };
+		ED2BD36C29CA400F000EB645 /* UdemosClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD36B29CA400F000EB645 /* UdemosClientTests.swift */; };
+		ED2BD37629CA400F000EB645 /* UdemosClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD37529CA400F000EB645 /* UdemosClientUITests.swift */; };
+		ED2BD37829CA400F000EB645 /* UdemosClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD37729CA400F000EB645 /* UdemosClientUITestsLaunchTests.swift */; };
+		ED2BD38629CA4061000EB645 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = ED2BD38529CA4061000EB645 /* Crypto */; };
+		ED2BD38829CA4061000EB645 /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = ED2BD38729CA4061000EB645 /* _CryptoExtras */; };
+		ED2BD38C29CA408B000EB645 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD38B29CA408B000EB645 /* CryptoUtil.swift */; };
+		ED2BD38F29CA410F000EB645 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED2BD38E29CA410F000EB645 /* CryptoSwift */; };
+		ED2BD39229CA4189000EB645 /* SecureDataSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD39129CA4189000EB645 /* SecureDataSender.swift */; };
+		ED2BD39529CA46B1000EB645 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2BD39429CA46B1000EB645 /* CryptoHelper.swift */; };
+		ED53D27229CF066B00210EA1 /* MessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED53D27129CF066B00210EA1 /* MessageBubbleView.swift */; };
+		ED53D27529CF0BD600210EA1 /* BaseDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED53D27429CF0BD600210EA1 /* BaseDateFormatter.swift */; };
+		ED53D27A29CF115D00210EA1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED53D27929CF115D00210EA1 /* APIError.swift */; };
+		EDC8DCBC29CB766800B93751 /* SecretMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8DCBB29CB766800B93751 /* SecretMessage.swift */; };
+		EDC8DCBE29CB768A00B93751 /* SecretMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8DCBD29CB768A00B93751 /* SecretMessageViewModel.swift */; };
+		EDC8DCC129CB984800B93751 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EDC8DCC029CB984800B93751 /* Alamofire */; };
+		EDE754E229CF709500B3379F /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = EDE754E129CF709500B3379F /* private_key.pem */; };
+		EDE754E429CF898A00B3379F /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE754E329CF898A00B3379F /* EncryptionService.swift */; };
+		EDE754E629CF8CA700B3379F /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE754E529CF8CA700B3379F /* Routes.swift */; };
+		EDE754EC29CF964E00B3379F /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE754EB29CF964E00B3379F /* AppDefines.swift */; };
+		EDE754EF29CF9A9500B3379F /* AppLocalisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE754EE29CF9A9500B3379F /* AppLocalisations.swift */; };
+		EDE754F129CF9E7000B3379F /* LocalizedStrings.json in Resources */ = {isa = PBXBuildFile; fileRef = EDE754F029CF9E7000B3379F /* LocalizedStrings.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED2BD36829CA400F000EB645 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2BD34A29CA400D000EB645 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2BD35129CA400D000EB645;
+			remoteInfo = UdemosClient;
+		};
+		ED2BD37229CA400F000EB645 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2BD34A29CA400D000EB645 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2BD35129CA400D000EB645;
+			remoteInfo = UdemosClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED258F3129CE1D0700305AFE /* ReceivedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedDataView.swift; sourceTree = "<group>"; };
+		ED258F3329CE1D3100305AFE /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
+		ED2BD35229CA400D000EB645 /* UdemosClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemosClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2BD35529CA400D000EB645 /* UdemosClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemosClientApp.swift; sourceTree = "<group>"; };
+		ED2BD35729CA400D000EB645 /* MessangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerView.swift; sourceTree = "<group>"; };
+		ED2BD35929CA400F000EB645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED2BD35C29CA400F000EB645 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED2BD35E29CA400F000EB645 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		ED2BD36129CA400F000EB645 /* UdemosClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UdemosClient.xcdatamodel; sourceTree = "<group>"; };
+		ED2BD36729CA400F000EB645 /* UdemosClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UdemosClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2BD36B29CA400F000EB645 /* UdemosClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemosClientTests.swift; sourceTree = "<group>"; };
+		ED2BD37129CA400F000EB645 /* UdemosClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UdemosClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2BD37529CA400F000EB645 /* UdemosClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemosClientUITests.swift; sourceTree = "<group>"; };
+		ED2BD37729CA400F000EB645 /* UdemosClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemosClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED2BD38B29CA408B000EB645 /* CryptoUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
+		ED2BD39129CA4189000EB645 /* SecureDataSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataSender.swift; sourceTree = "<group>"; };
+		ED2BD39329CA4652000EB645 /* CommonCryptoBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCryptoBridging.h; sourceTree = "<group>"; };
+		ED2BD39429CA46B1000EB645 /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
+		ED53D27129CF066B00210EA1 /* MessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleView.swift; sourceTree = "<group>"; };
+		ED53D27429CF0BD600210EA1 /* BaseDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDateFormatter.swift; sourceTree = "<group>"; };
+		ED53D27929CF115D00210EA1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		ED636DC229CCC26200CAB155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EDC8DCBB29CB766800B93751 /* SecretMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMessage.swift; sourceTree = "<group>"; };
+		EDC8DCBD29CB768A00B93751 /* SecretMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretMessageViewModel.swift; sourceTree = "<group>"; };
+		EDE754E129CF709500B3379F /* private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.pem; sourceTree = "<group>"; };
+		EDE754E329CF898A00B3379F /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
+		EDE754E529CF8CA700B3379F /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		EDE754EB29CF964E00B3379F /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
+		EDE754EE29CF9A9500B3379F /* AppLocalisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalisations.swift; sourceTree = "<group>"; };
+		EDE754F029CF9E7000B3379F /* LocalizedStrings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalizedStrings.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED2BD34F29CA400D000EB645 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2BD38829CA4061000EB645 /* _CryptoExtras in Frameworks */,
+				EDC8DCC129CB984800B93751 /* Alamofire in Frameworks */,
+				ED2BD38629CA4061000EB645 /* Crypto in Frameworks */,
+				ED2BD38F29CA410F000EB645 /* CryptoSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2BD36429CA400F000EB645 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2BD36E29CA400F000EB645 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED258F3029CE1CEA00305AFE /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ED258F3129CE1D0700305AFE /* ReceivedDataView.swift */,
+				ED258F3329CE1D3100305AFE /* MessageInputView.swift */,
+				ED53D27129CF066B00210EA1 /* MessageBubbleView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		ED2BD34929CA400D000EB645 = {
+			isa = PBXGroup;
+			children = (
+				ED2BD35429CA400D000EB645 /* UdemosClient */,
+				ED2BD36A29CA400F000EB645 /* UdemosClientTests */,
+				ED2BD37429CA400F000EB645 /* UdemosClientUITests */,
+				ED2BD35329CA400D000EB645 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED2BD35329CA400D000EB645 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD35229CA400D000EB645 /* UdemosClient.app */,
+				ED2BD36729CA400F000EB645 /* UdemosClientTests.xctest */,
+				ED2BD37129CA400F000EB645 /* UdemosClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2BD35429CA400D000EB645 /* UdemosClient */ = {
+			isa = PBXGroup;
+			children = (
+				EDE754E029CF707D00B3379F /* Resources */,
+				ED636DC229CCC26200CAB155 /* Info.plist */,
+				ED2BD38929CA406D000EB645 /* Source */,
+				ED2BD35529CA400D000EB645 /* UdemosClientApp.swift */,
+				ED2BD35929CA400F000EB645 /* Assets.xcassets */,
+				ED2BD35E29CA400F000EB645 /* Persistence.swift */,
+				ED2BD36029CA400F000EB645 /* UdemosClient.xcdatamodeld */,
+				ED2BD35B29CA400F000EB645 /* Preview Content */,
+			);
+			path = UdemosClient;
+			sourceTree = "<group>";
+		};
+		ED2BD35B29CA400F000EB645 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD35C29CA400F000EB645 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED2BD36A29CA400F000EB645 /* UdemosClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD36B29CA400F000EB645 /* UdemosClientTests.swift */,
+			);
+			path = UdemosClientTests;
+			sourceTree = "<group>";
+		};
+		ED2BD37429CA400F000EB645 /* UdemosClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD37529CA400F000EB645 /* UdemosClientUITests.swift */,
+				ED2BD37729CA400F000EB645 /* UdemosClientUITestsLaunchTests.swift */,
+			);
+			path = UdemosClientUITests;
+			sourceTree = "<group>";
+		};
+		ED2BD38929CA406D000EB645 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EDE754E829CF905700B3379F /* Globals */,
+				EDE754E729CF904600B3379F /* Extensions */,
+				ED53D27729CF0D9E00210EA1 /* Views */,
+				ED53D27329CF0BBB00210EA1 /* Utils */,
+				ED258F3029CE1CEA00305AFE /* ViewComponents */,
+				EDC8DCBA29CB765C00B93751 /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		ED2BD38A29CA407B000EB645 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD38B29CA408B000EB645 /* CryptoUtil.swift */,
+				ED2BD39329CA4652000EB645 /* CommonCryptoBridging.h */,
+				ED2BD39429CA46B1000EB645 /* CryptoHelper.swift */,
+				EDE754E329CF898A00B3379F /* EncryptionService.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		ED2BD39029CA4178000EB645 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD39129CA4189000EB645 /* SecureDataSender.swift */,
+				ED53D27929CF115D00210EA1 /* APIError.swift */,
+				EDE754E529CF8CA700B3379F /* Routes.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ED53D27329CF0BBB00210EA1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD39029CA4178000EB645 /* Networking */,
+				ED53D27629CF0D8100210EA1 /* Date */,
+				ED2BD38A29CA407B000EB645 /* Crypto */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ED53D27629CF0D8100210EA1 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				ED53D27429CF0BD600210EA1 /* BaseDateFormatter.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		ED53D27729CF0D9E00210EA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BD35729CA400D000EB645 /* MessangerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED53D27829CF0DAC00210EA1 /* SecretMessages */ = {
+			isa = PBXGroup;
+			children = (
+				EDC8DCBB29CB766800B93751 /* SecretMessage.swift */,
+				EDC8DCBD29CB768A00B93751 /* SecretMessageViewModel.swift */,
+			);
+			path = SecretMessages;
+			sourceTree = "<group>";
+		};
+		EDC8DCBA29CB765C00B93751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED53D27829CF0DAC00210EA1 /* SecretMessages */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDE754E029CF707D00B3379F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDE754E129CF709500B3379F /* private_key.pem */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDE754E729CF904600B3379F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDE754E829CF905700B3379F /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				EDE754ED29CF9A8100B3379F /* Localisations */,
+				EDE754EB29CF964E00B3379F /* AppDefines.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		EDE754ED29CF9A8100B3379F /* Localisations */ = {
+			isa = PBXGroup;
+			children = (
+				EDE754F029CF9E7000B3379F /* LocalizedStrings.json */,
+				EDE754EE29CF9A9500B3379F /* AppLocalisations.swift */,
+			);
+			path = Localisations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED2BD35129CA400D000EB645 /* UdemosClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2BD37B29CA400F000EB645 /* Build configuration list for PBXNativeTarget "UdemosClient" */;
+			buildPhases = (
+				ED2BD34E29CA400D000EB645 /* Sources */,
+				ED2BD34F29CA400D000EB645 /* Frameworks */,
+				ED2BD35029CA400D000EB645 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UdemosClient;
+			packageProductDependencies = (
+				ED2BD38529CA4061000EB645 /* Crypto */,
+				ED2BD38729CA4061000EB645 /* _CryptoExtras */,
+				ED2BD38E29CA410F000EB645 /* CryptoSwift */,
+				EDC8DCC029CB984800B93751 /* Alamofire */,
+			);
+			productName = UdemosClient;
+			productReference = ED2BD35229CA400D000EB645 /* UdemosClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED2BD36629CA400F000EB645 /* UdemosClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2BD37E29CA400F000EB645 /* Build configuration list for PBXNativeTarget "UdemosClientTests" */;
+			buildPhases = (
+				ED2BD36329CA400F000EB645 /* Sources */,
+				ED2BD36429CA400F000EB645 /* Frameworks */,
+				ED2BD36529CA400F000EB645 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2BD36929CA400F000EB645 /* PBXTargetDependency */,
+			);
+			name = UdemosClientTests;
+			productName = UdemosClientTests;
+			productReference = ED2BD36729CA400F000EB645 /* UdemosClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED2BD37029CA400F000EB645 /* UdemosClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2BD38129CA400F000EB645 /* Build configuration list for PBXNativeTarget "UdemosClientUITests" */;
+			buildPhases = (
+				ED2BD36D29CA400F000EB645 /* Sources */,
+				ED2BD36E29CA400F000EB645 /* Frameworks */,
+				ED2BD36F29CA400F000EB645 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED2BD37329CA400F000EB645 /* PBXTargetDependency */,
+			);
+			name = UdemosClientUITests;
+			productName = UdemosClientUITests;
+			productReference = ED2BD37129CA400F000EB645 /* UdemosClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED2BD34A29CA400D000EB645 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					ED2BD35129CA400D000EB645 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					ED2BD36629CA400F000EB645 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = ED2BD35129CA400D000EB645;
+					};
+					ED2BD37029CA400F000EB645 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = ED2BD35129CA400D000EB645;
+					};
+				};
+			};
+			buildConfigurationList = ED2BD34D29CA400D000EB645 /* Build configuration list for PBXProject "UdemosClient" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED2BD34929CA400D000EB645;
+			packageReferences = (
+				ED2BD38429CA4060000EB645 /* XCRemoteSwiftPackageReference "swift-crypto" */,
+				ED2BD38D29CA410F000EB645 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				EDC8DCBF29CB984800B93751 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = ED2BD35329CA400D000EB645 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED2BD35129CA400D000EB645 /* UdemosClient */,
+				ED2BD36629CA400F000EB645 /* UdemosClientTests */,
+				ED2BD37029CA400F000EB645 /* UdemosClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED2BD35029CA400D000EB645 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2BD35D29CA400F000EB645 /* Preview Assets.xcassets in Resources */,
+				ED2BD35A29CA400F000EB645 /* Assets.xcassets in Resources */,
+				EDE754F129CF9E7000B3379F /* LocalizedStrings.json in Resources */,
+				EDE754E229CF709500B3379F /* private_key.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2BD36529CA400F000EB645 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2BD36F29CA400F000EB645 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED2BD34E29CA400D000EB645 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2BD39229CA4189000EB645 /* SecureDataSender.swift in Sources */,
+				EDC8DCBE29CB768A00B93751 /* SecretMessageViewModel.swift in Sources */,
+				ED53D27229CF066B00210EA1 /* MessageBubbleView.swift in Sources */,
+				EDC8DCBC29CB766800B93751 /* SecretMessage.swift in Sources */,
+				ED2BD39529CA46B1000EB645 /* CryptoHelper.swift in Sources */,
+				EDE754EF29CF9A9500B3379F /* AppLocalisations.swift in Sources */,
+				EDE754E429CF898A00B3379F /* EncryptionService.swift in Sources */,
+				ED2BD38C29CA408B000EB645 /* CryptoUtil.swift in Sources */,
+				ED2BD35F29CA400F000EB645 /* Persistence.swift in Sources */,
+				ED2BD36229CA400F000EB645 /* UdemosClient.xcdatamodeld in Sources */,
+				EDE754E629CF8CA700B3379F /* Routes.swift in Sources */,
+				ED2BD35829CA400D000EB645 /* MessangerView.swift in Sources */,
+				ED2BD35629CA400D000EB645 /* UdemosClientApp.swift in Sources */,
+				ED53D27529CF0BD600210EA1 /* BaseDateFormatter.swift in Sources */,
+				EDE754EC29CF964E00B3379F /* AppDefines.swift in Sources */,
+				ED258F3429CE1D3100305AFE /* MessageInputView.swift in Sources */,
+				ED258F3229CE1D0700305AFE /* ReceivedDataView.swift in Sources */,
+				ED53D27A29CF115D00210EA1 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2BD36329CA400F000EB645 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2BD36C29CA400F000EB645 /* UdemosClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2BD36D29CA400F000EB645 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2BD37829CA400F000EB645 /* UdemosClientUITestsLaunchTests.swift in Sources */,
+				ED2BD37629CA400F000EB645 /* UdemosClientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED2BD36929CA400F000EB645 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2BD35129CA400D000EB645 /* UdemosClient */;
+			targetProxy = ED2BD36829CA400F000EB645 /* PBXContainerItemProxy */;
+		};
+		ED2BD37329CA400F000EB645 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2BD35129CA400D000EB645 /* UdemosClient */;
+			targetProxy = ED2BD37229CA400F000EB645 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ED2BD37929CA400F000EB645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED2BD37A29CA400F000EB645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED2BD37C29CA400F000EB645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UdemosClient/Preview Content\"";
+				DEVELOPMENT_TEAM = 3A2P9CY65L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UdemosClient/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinisaAbramovic.UdemosClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED2BD37D29CA400F000EB645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"UdemosClient/Preview Content\"";
+				DEVELOPMENT_TEAM = 3A2P9CY65L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UdemosClient/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinisaAbramovic.UdemosClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ED2BD37F29CA400F000EB645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A2P9CY65L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinisaAbramovic.UdemosClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UdemosClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UdemosClient";
+			};
+			name = Debug;
+		};
+		ED2BD38029CA400F000EB645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A2P9CY65L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinisaAbramovic.UdemosClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UdemosClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UdemosClient";
+			};
+			name = Release;
+		};
+		ED2BD38229CA400F000EB645 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A2P9CY65L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinisaAbramovic.UdemosClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UdemosClient;
+			};
+			name = Debug;
+		};
+		ED2BD38329CA400F000EB645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A2P9CY65L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SinisaAbramovic.UdemosClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UdemosClient;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED2BD34D29CA400D000EB645 /* Build configuration list for PBXProject "UdemosClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2BD37929CA400F000EB645 /* Debug */,
+				ED2BD37A29CA400F000EB645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2BD37B29CA400F000EB645 /* Build configuration list for PBXNativeTarget "UdemosClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2BD37C29CA400F000EB645 /* Debug */,
+				ED2BD37D29CA400F000EB645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2BD37E29CA400F000EB645 /* Build configuration list for PBXNativeTarget "UdemosClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2BD37F29CA400F000EB645 /* Debug */,
+				ED2BD38029CA400F000EB645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2BD38129CA400F000EB645 /* Build configuration list for PBXNativeTarget "UdemosClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2BD38229CA400F000EB645 /* Debug */,
+				ED2BD38329CA400F000EB645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED2BD38429CA4060000EB645 /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		ED2BD38D29CA410F000EB645 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		EDC8DCBF29CB984800B93751 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED2BD38529CA4061000EB645 /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED2BD38429CA4060000EB645 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+		ED2BD38729CA4061000EB645 /* _CryptoExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED2BD38429CA4060000EB645 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = _CryptoExtras;
+		};
+		ED2BD38E29CA410F000EB645 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED2BD38D29CA410F000EB645 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		EDC8DCC029CB984800B93751 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDC8DCBF29CB984800B93751 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		ED2BD36029CA400F000EB645 /* UdemosClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED2BD36129CA400F000EB645 /* UdemosClient.xcdatamodel */,
+			);
+			currentVersion = ED2BD36129CA400F000EB645 /* UdemosClient.xcdatamodel */;
+			path = UdemosClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ED2BD34A29CA400D000EB645 /* Project object */;
+}

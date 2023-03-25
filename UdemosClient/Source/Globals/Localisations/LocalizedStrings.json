@@ -1,0 +1,47 @@
+{
+    "en": {
+        "helloWorld": "Hello, World!",
+        "sendMessage": "Send Message",
+        "error": "Error",
+        "secretMessenger": "Secret Messenger",
+        "ok": "OK",
+        "receivedData": "Received Data",
+        "enterMessage": "Enter Message"
+    },
+    "fr": {
+        "helloWorld": "Bonjour le monde!",
+        "sendMessage": "Envoyer un message",
+        "error": "Erreur",
+        "secretMessenger": "Messager secret",
+        "ok": "D'accord",
+        "receivedData": "Données reçues",
+        "enterMessage": "Entrer le message"
+    },
+    "de": {
+        "helloWorld": "Hallo Welt!",
+        "sendMessage": "Nachricht senden",
+        "error": "Fehler",
+        "secretMessenger": "Geheimer Bote",
+        "ok": "OK",
+        "receivedData": "Empfangene Daten",
+        "enterMessage": "Nachricht eingeben"
+    },
+    "hr": {
+        "helloWorld": "Bok svijete!",
+        "sendMessage": "Pošalji poruku",
+        "error": "Greška",
+        "secretMessenger": "Tajni glasnik",
+        "ok": "U redu",
+        "receivedData": "Primljena poruka",
+        "enterMessage": "Upiši poruku"
+    },
+    "it": {
+        "helloWorld": "Ciao, Mondo!",
+        "sendMessage": "Invia Messaggio",
+        "error": "Errore",
+        "secretMessenger": "Messaggero Segreto",
+        "ok": "OK",
+        "receivedData": "Dati Ricevuti",
+        "enterMessage": "Inserisci Messaggio"
+    }
+}
