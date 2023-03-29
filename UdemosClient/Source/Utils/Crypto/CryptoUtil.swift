@@ -15,7 +15,7 @@ final class CryptoUtil {
             throw APIError.decodingError(NSError(domain: "InvalidKeyOrIV", code: -1, userInfo: nil))
         }
         do {
-            let aes = try AES(key: [UInt8](key), blockMode: CBC(iv: [UInt8](iv)), padding: .pkcs7)
+            let aes = try AES(key: [UInt8](key), blockMode: CBC(iv: [UInt8](iv)), padding: .pkcs7)            
             let encryptedData = try aes.encrypt([UInt8](data))
             return Data(encryptedData)
         } catch {

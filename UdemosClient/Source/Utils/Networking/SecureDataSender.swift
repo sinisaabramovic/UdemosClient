@@ -32,7 +32,7 @@ final class SecureDataSender {
 
 extension SecureDataSender {
     
-    func sendEncryptedMessage(jsonData: Data) async throws -> String {
+    func sendEncryptedMessage(jsonData: Data, path: String) async throws -> String {
         guard let baseURL else {
             throw APIError.networkError(NSError(
                 domain: "InvalidBaseURL",
@@ -40,7 +40,7 @@ extension SecureDataSender {
                 userInfo: nil
             ))
         }
-        let requestURL = baseURL.appendingPathComponent("secret")
+        let requestURL = baseURL.appendingPathComponent(path)
         
         let (encryptedData, key, iv) = try encryptionService.encrypt(data: jsonData)
         let base64String = encryptedData.base64EncodedString()

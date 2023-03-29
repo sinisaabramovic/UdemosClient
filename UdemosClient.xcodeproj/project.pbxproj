@@ -36,6 +36,10 @@
 		EDE754EC29CF964E00B3379F /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE754EB29CF964E00B3379F /* AppDefines.swift */; };
 		EDE754EF29CF9A9500B3379F /* AppLocalisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE754EE29CF9A9500B3379F /* AppLocalisations.swift */; };
 		EDE754F129CF9E7000B3379F /* LocalizedStrings.json in Resources */ = {isa = PBXBuildFile; fileRef = EDE754F029CF9E7000B3379F /* LocalizedStrings.json */; };
+		EDF211C829D37C91003C153A /* SimpleSecretMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF211C729D37C91003C153A /* SimpleSecretMessage.swift */; };
+		EDF211CA29D37CF3003C153A /* SimpleSecretMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF211C929D37CF3003C153A /* SimpleSecretMessageViewModel.swift */; };
+		EDF211CD29D37DAC003C153A /* SimpleMessangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF211CC29D37DAC003C153A /* SimpleMessangerView.swift */; };
+		EDF211CF29D37E01003C153A /* SimpleReceivedDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF211CE29D37E01003C153A /* SimpleReceivedDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		EDE754EB29CF964E00B3379F /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		EDE754EE29CF9A9500B3379F /* AppLocalisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalisations.swift; sourceTree = "<group>"; };
 		EDE754F029CF9E7000B3379F /* LocalizedStrings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalizedStrings.json; sourceTree = "<group>"; };
+		EDF211C729D37C91003C153A /* SimpleSecretMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSecretMessage.swift; sourceTree = "<group>"; };
+		EDF211C929D37CF3003C153A /* SimpleSecretMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSecretMessageViewModel.swift; sourceTree = "<group>"; };
+		EDF211CC29D37DAC003C153A /* SimpleMessangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMessangerView.swift; sourceTree = "<group>"; };
+		EDF211CE29D37E01003C153A /* SimpleReceivedDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleReceivedDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 				ED258F3129CE1D0700305AFE /* ReceivedDataView.swift */,
 				ED258F3329CE1D3100305AFE /* MessageInputView.swift */,
 				ED53D27129CF066B00210EA1 /* MessageBubbleView.swift */,
+				EDF211CE29D37E01003C153A /* SimpleReceivedDataView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -243,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2BD35729CA400D000EB645 /* MessangerView.swift */,
+				EDF211CC29D37DAC003C153A /* SimpleMessangerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 		ED53D27829CF0DAC00210EA1 /* SecretMessages */ = {
 			isa = PBXGroup;
 			children = (
+				EDF211CB29D37D40003C153A /* Simple */,
 				EDC8DCBB29CB766800B93751 /* SecretMessage.swift */,
 				EDC8DCBD29CB768A00B93751 /* SecretMessageViewModel.swift */,
 			);
@@ -295,6 +306,15 @@
 				EDE754EE29CF9A9500B3379F /* AppLocalisations.swift */,
 			);
 			path = Localisations;
+			sourceTree = "<group>";
+		};
+		EDF211CB29D37D40003C153A /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				EDF211C729D37C91003C153A /* SimpleSecretMessage.swift */,
+				EDF211C929D37CF3003C153A /* SimpleSecretMessageViewModel.swift */,
+			);
+			path = Simple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +469,9 @@
 				EDE754E429CF898A00B3379F /* EncryptionService.swift in Sources */,
 				ED2BD38C29CA408B000EB645 /* CryptoUtil.swift in Sources */,
 				ED2BD35F29CA400F000EB645 /* Persistence.swift in Sources */,
+				EDF211CD29D37DAC003C153A /* SimpleMessangerView.swift in Sources */,
 				ED2BD36229CA400F000EB645 /* UdemosClient.xcdatamodeld in Sources */,
+				EDF211CF29D37E01003C153A /* SimpleReceivedDataView.swift in Sources */,
 				EDE754E629CF8CA700B3379F /* Routes.swift in Sources */,
 				ED2BD35829CA400D000EB645 /* MessangerView.swift in Sources */,
 				ED2BD35629CA400D000EB645 /* UdemosClientApp.swift in Sources */,
@@ -458,6 +480,8 @@
 				ED258F3429CE1D3100305AFE /* MessageInputView.swift in Sources */,
 				ED258F3229CE1D0700305AFE /* ReceivedDataView.swift in Sources */,
 				ED53D27A29CF115D00210EA1 /* APIError.swift in Sources */,
+				EDF211CA29D37CF3003C153A /* SimpleSecretMessageViewModel.swift in Sources */,
+				EDF211C829D37C91003C153A /* SimpleSecretMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

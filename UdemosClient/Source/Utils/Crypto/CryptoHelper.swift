@@ -42,7 +42,7 @@ final class CryptoHelper {
         
         let keyData = digest.subdata(in: 0..<keyLength)
         let ivData = digest.subdata(in: keyLength..<(keyLength + ivLength))
-        
+          
         return (key: keyData, iv: ivData)
     }
     

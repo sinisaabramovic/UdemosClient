@@ -1,18 +1,18 @@
 //
-//  SecretMessageViewModel.swift
+//  SimpleSecretMessageViewModel.swift
 //  UdemosClient
 //
-//  Created by Sinisa Abramovic on 22.03.2023..
+//  Created by Sinisa Abramovic on 28.03.2023..
 //
 
 import Foundation
 import SwiftUI
 
-class SecretMessageViewModel: ObservableObject {
+class SimpleSecretMessageViewModel: ObservableObject {
     
     // MARK: - Public properties -
     
-    @Published var messages: [SecretMessage] = []
+    @Published var messages: [SimpleSecretMessage] = []
     @Published var inputMessage: String = ""
     @Published var errorMessage: String = ""
     @Published var showError: Bool = false
@@ -28,18 +28,18 @@ class SecretMessageViewModel: ObservableObject {
 
 // MARK: - Extensions -
 
-extension SecretMessageViewModel {
+extension SimpleSecretMessageViewModel {
     
     func sendEncryptedMessage() async {
         do {
-            let message = SecretMessage(message: inputMessage, sentByUser: true)
+            let message = SimpleSecretMessage(message: inputMessage)
             let jsonData = try JSONEncoder().encode(message)
             
             DispatchQueue.main.async {
                 self.messages.append(message)
             }
             
-            let response = try await apiManager.sendEncryptedMessage(jsonData: jsonData, path: "secret")
+            let response = try await apiManager.sendEncryptedMessage(jsonData: jsonData, path: "simplesecret")
             
             let data = response.data(using: .utf8)!
             let fetchedSecretResult = parseSecretMessage(from: data)
@@ -63,9 +63,9 @@ extension SecretMessageViewModel {
     
 }
 
-private extension SecretMessageViewModel {
+private extension SimpleSecretMessageViewModel {
     
-    func parseSecretMessage(from data: Data?) -> Result<SecretMessage, Error> {
+    func parseSecretMessage(from data: Data?) -> Result<SimpleSecretMessage, Error> {
         guard let data = data else {
             return .failure(APIError.decodingError(NSError(
                 domain: "Error: decodingError for Data!",
@@ -82,16 +82,7 @@ private extension SecretMessageViewModel {
             }
             
             let message = json["message"] as! String
-            let createdAt = BaseDateFormatter.dateFormatterForSecretServer.date(
-                from: json["createdAt"] as? String ?? "2001-01-01 00:00:00"
-            )
-            let id = UUID(uuidString: json["id"] as? String ?? "") ?? UUID()
-            let secretMessage = SecretMessage(
-                message: message,
-                createdAt: createdAt ?? Date(),
-                id: id,
-                sentByUser: false
-            )
+            let secretMessage = SimpleSecretMessage(message: message)
             return .success(secretMessage)
         } catch {
             return .failure(APIError.decodingError(error))

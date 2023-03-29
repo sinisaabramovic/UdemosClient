@@ -8,5 +8,6 @@
 import Foundation
 
 enum Routes {
-    static let baseUrl = URL(string: "http://127.0.0.1:8080/api")
+    static let baseUrlRemote = URL(string: "http://46.101.138.216:8080/api")
+    static let baseUrlLocal = URL(string: "http://127.0.0.1:8080/api")
 }
